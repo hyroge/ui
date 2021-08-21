@@ -1,6 +1,6 @@
 ---
 name: Bug report「问题报告」
-about: 帮助我们修复bug，让connect UI变得更好
+about: 帮助我们修复bug，让connect UI变得更好 注：如果要提供新的主意，请在“discussions”tab讨论。
 title: ''
 labels: ''
 assignees: ''
