@@ -1,0 +1,186 @@
+/* 欢迎使用connect UI */
+/* https://github.com/KAILUENG/connect-UI */
+
+body{
+    /* 用于保持页面有最基本的内间距 */
+    padding: 40px;
+    margin: 0px;
+}
+
+.cui-if-use-tab{
+    margin-top: 100px;
+}
+
+h1{
+    font-size: 60px;
+    margin: 0px;
+    font-weight: bolder;
+}
+
+h2{
+    font-size: 40px;
+    font-weight: bolder;
+    margin: 0px;
+}
+
+@media only screen and (max-width:500px) {
+    h1 {
+        font-size: 40px !important;
+    }
+    h2 {
+        font-size: 28px !important;
+    }
+}
+
+/* 用于顶栏 */
+
+.cui-tab{
+    backdrop-filter: blur(16px);
+    background-color: hsla(0, 0%, 100%, .92);
+    box-shadow: 0 2px 18px 0 rgb(0 0 0 / 7%);
+    z-index: 1000;
+    padding-top: 20px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    right: 0;
+    float: right;
+    transition-duration: 0.4s;
+}
+
+.cui-LOGO-on-tab{
+    /* 用于文字LOGO，若要使用SVG的LOGO，请使用.cui-logosvg-on-tab */
+    float: left;
+    margin: 10px;
+}
+
+.cui-title-on-tab{
+    float: left;
+    cursor: pointer;
+    margin-right: 20px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 16px;
+    transition-timing-function: cubic-bezier(1, 0, 0.17, 1);
+    transition: 0.4s;
+    float: right;
+}
+
+.cui-title-on-tab:hover{
+    background-color: #F9F8F8;
+    transition-timing-function: cubic-bezier(1, 0, 0.17, 1);
+    transition: 0.4s;
+  }
+
+  .cui-title-on-tab:active{
+    background-color: #ebebeb;
+  }
+
+  @media only screen and (max-width:500px) {
+    .cui-title-on-tab {
+        display: none;
+    }
+    .cui-mobie-tab{
+        display: block;
+    }
+}
+
+/* 用于移动端tab栏的弹出菜单 */
+.dropmenu {
+    display: none;
+    background-color: #ffffff00;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    font-size: 28px;
+    border: none;
+}
+
+@media only screen and (max-width:500px) {
+    .dropmenu {
+        display: block;
+    }
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #ffffff;
+}
+
+.dropmenu {
+    float: right;
+    position: relative;
+}
+
+.dropmenu a:hover {
+    background-color: #f1f1f1
+}
+
+.dropmenu-content {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-5%);
+    height: 0;
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 16px;
+    min-width: 340px;
+    overflow: auto;
+    box-shadow: 0 2px 18px 0 rgb(0 0 0 / 7%);
+    right: 0;
+    z-index: 1;
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(0.6, 0.02, 0, 1.01);
+}
+
+.dropmenu-content a {
+    color: black;
+    padding: 12px 16px;
+    border-radius: 16px;
+    text-decoration: none;
+    display: block;
+    margin: 10px;
+}
+
+.show {
+    visibility: visible;
+    opacity: 1;
+    height: 780px;
+    transform: translateY(0);
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(0.6, 0.02, 0, 1.01);
+}
+/* 按钮 */
+.cui-round-button{
+    padding: 10px;
+    background-color:#3BA4FF ;
+    border-radius: 100000px;
+    border: 0px;
+    cursor: pointer;
+    height: 60px;
+    width: 60px;
+    transition-duration: 0.4s;
+}
+
+.cui-round-button:hover{
+    transition-duration: 0.4s;
+    box-shadow: 0 8px 43px 0 rgb(0 0 0 / 13%);
+}
+
+.cui-button{
+    padding: 10px;
+    background-color:#3BA4FF ;
+    border-radius: 8px;
+    border: 0px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.cui-button:hover{
+    transition-duration: 0.4s;
+    box-shadow: 0 8px 43px 0 rgb(0 0 0 / 13%);
+}
