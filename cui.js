@@ -17,3 +17,9 @@ window.onclick = function(event) {
     }
   }
 }
+
+
+/* 实现展开菜单 */
+function cuidroplist() {
+  document.getElementById("cuidroplist").classList.toggle("listshow");
+}
