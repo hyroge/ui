@@ -36,7 +36,7 @@ h2{
 
 .cui-tab{
     backdrop-filter: blur(16px);
-    background-color: hsla(0, 0%, 100%, .92);
+    background-color: rgba(255, 255, 255, 0.555);
     box-shadow: 0 2px 18px 0 rgb(0 0 0 / 7%);
     z-index: 1000;
     padding-top: 20px;
@@ -148,12 +148,21 @@ a {
     display: block;
     margin: 10px;
     transition-duration: 240ms;
+<<<<<<< Updated upstream
 }
 
 a:hover {
     background-color: whitesmoke;
 }
 
+=======
+}
+
+a:hover {
+    background-color: whitesmoke;
+}
+
+>>>>>>> Stashed changes
 
 .show {
     visibility: visible;
@@ -173,11 +182,19 @@ a:hover {
     height: 60px;
     width: 60px;
     transition-duration: 0.4s;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .cui-round-button:hover{
     transition-duration: 0.4s;
     box-shadow: 0 8px 43px 0 rgb(0 0 0 / 13%);
+    background-color:#2298ff ;
+}
+
+.cui-round-button:active{
+    transform: none;
+    transform: scale(0.98,0.98);
 }
 
 .cui-button{
@@ -195,6 +212,16 @@ a:hover {
 .cui-button:hover{
     transition-duration: 0.4s;
     box-shadow: 0 8px 43px 0 rgb(0 0 0 / 13%);
+<<<<<<< Updated upstream
+=======
+    background-color:#2298ff ;
+    transform: scale(1.01,1.01);
+}
+
+.cui-button:active{
+    transform: none;
+    transition: 250ms;
+>>>>>>> Stashed changes
 }
 
 /*用于下拉菜单*/
@@ -209,6 +236,12 @@ a:hover {
     border: none;
     cursor: pointer;
     box-shadow: 0 2px 18px 0 rgb(0 0 0 / 7%);
+<<<<<<< Updated upstream
+=======
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: 250ms;
+>>>>>>> Stashed changes
 }
 
 .cui-dropmenu-content {
@@ -216,7 +249,12 @@ a:hover {
     opacity: 0;
     max-height: 0px;
     position: absolute;
+<<<<<<< Updated upstream
     background-color: #ffffff;
+=======
+    backdrop-filter: blur(16px);
+    background-color: hsla(0, 0%, 100%, .92);
+>>>>>>> Stashed changes
     border-radius: 16px;
     min-width: 300px;
     overflow: auto;
@@ -224,9 +262,15 @@ a:hover {
     z-index: 1;
     transition-duration: 0.4s;
     transition-timing-function: cubic-bezier(0.6, 0.02, 0, 1.01);
+<<<<<<< Updated upstream
     margin-top: 10px;
     overflow:hidden;
     transform: scale(1,0.8);
+=======
+    overflow:hidden;
+    transform: scale(1,0.8);
+    margin-top: -8px;
+>>>>>>> Stashed changes
 }
 
 .listshow {
@@ -236,4 +280,76 @@ a:hover {
     transform: none;
     transition-duration: 0.4s;
     transition-timing-function: cubic-bezier(0.6, 0.02, 0, 1.01);
+<<<<<<< Updated upstream
 }
+=======
+}
+
+.cui-dropmenu:hover{
+    transition-duration: 0.4s;
+    box-shadow: 0 8px 43px 0 rgb(0 0 0 / 13%);
+    transform: scale(1.01,1.01);
+}
+
+.cui-dropmenu:active{
+    transform: none;
+    transform: scale(0.98,0.98);
+}
+
+
+.cui-pop-up-prompt{
+    background-color: #F8BD34;
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display:block;
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(0.6, 0.02, 0, 1.01);
+    max-height: 100px;
+}
+
+.cui-parendisplay{
+    float: right;
+    cursor: pointer;
+
+}
+
+#cuisnackbar {
+    visibility: hidden;
+    box-shadow: 0 2px 18px 0 rgb(0 0 0 / 7%);
+    backdrop-filter: blur(16px);
+    background-color: rgba(255, 255, 255, 0.555);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    bottom: 30px;
+    font-size: 17px;
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(0.6, 0.02, 0, 1.01);
+    opacity: 0;
+    max-height: 0px;
+    transform: scale(1,0.8);
+    border-radius: 16px;
+    min-width: 300px;
+}
+
+#cuisnackbar.show {
+    visibility: visible;
+    opacity: 1;
+    max-height: 600px;
+    transform: none;
+}
+
+@media only screen and (max-width:846px) {
+    #cuisnackbar {
+        right: 20px;
+        left: 20px;
+    }
+}
+
+
+>>>>>>> Stashed changes
