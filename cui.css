@@ -5,6 +5,7 @@ body{
     /* 用于保持页面有最基本的内间距 */
     padding: 40px;
     margin: 0px;
+    border-width: 0px;
 }
 
 .cui-if-use-tab{
@@ -61,7 +62,6 @@ h2{
     float: left;
     cursor: pointer;
     margin-right: 20px;
-    background-color: white;
     padding: 10px;
     border-radius: 16px;
     transition-timing-function: cubic-bezier(1, 0, 0.17, 1);
@@ -70,14 +70,10 @@ h2{
 }
 
 .cui-title-on-tab:hover{
-    background-color: #F9F8F8;
+    background-color: #f9f8f89d;
     transition-timing-function: cubic-bezier(1, 0, 0.17, 1);
     transition: 0.4s;
-  }
-
-  .cui-title-on-tab:active{
-    background-color: #ebebeb;
-  }
+}
 
   @media only screen and (max-width:846px) {
     .cui-title-on-tab {
@@ -155,7 +151,6 @@ a:hover {
 }
 
 
-}
 
 a:hover {
     background-color: whitesmoke;
@@ -268,7 +263,6 @@ a:hover {
     transition-timing-function: cubic-bezier(0.6, 0.02, 0, 1.01);
 }
 
-}
 
 .cui-dropmenu:hover{
     transition-duration: 0.4s;
@@ -336,3 +330,121 @@ a:hover {
     }
 }
 
+.cui-input{
+    padding: 14px;
+    background-color: white;
+    border-radius: 8px;
+    border: 1px;
+    border-style: solid;
+    border-color: #EFEFEF;
+    min-width: 350px;
+    outline: none;
+    transition-duration: 0.2s;
+}
+.cui-input-color{
+    padding: 8px;
+    background-color: white;
+    border-radius: 8px;
+    border: 1px;
+    border-style: solid;
+    border-color: #EFEFEF;
+    min-width: 50px;
+    outline: none;
+    transition-duration: 0.2s;
+    min-height: 50px;
+}
+
+.cui-input:focus{
+    border-color: #3BA4FF;
+    border-width: 3px;
+}
+.cui-p-input{
+    font-weight: bolder;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width:846px) {
+    .cui-input{
+        min-width: max-content;
+}
+}
+input-placeholder{
+    font-weight:unset;
+    color: #EFEFEF;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    font-weight:unset;
+    color: #EFEFEF;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    font-weight:unset;
+    color: #EFEFEF;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    font-weight:unset;
+    color: #EFEFEF;
+}
+::-ms-input-placeholder { /* Internet Explorer 10-11 */
+    font-weight:unset;
+    color: #EFEFEF;
+}
+
+.cui-loading {
+    border: 2px solid #EFEFEF;
+    border-radius: 50%;
+    border-top: 2px solid #3BA4FF;
+    width: 40px;
+    height: 40px;
+    -webkit-animation: loading 2s cubic-bezier(0.56, -0.02, 0.25, 1.01) infinite;
+    animation: loading 2s cubic-bezier(0.56, -0.02, 0.25, 1.01) infinite;
+}
+
+@-webkit-keyframes loading {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.cui-stopwatch{
+    background-color: #EFEFEF;
+    min-width: 140px;
+    height: 4px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+.cui-stopwatch-advance{
+    background-color: #3BA4FF;
+    min-width: 140px;
+    height: 4px;
+    border-radius: 10px;
+    animation: stopwatch 20s cubic-bezier(0.56, -0.02, 0.25, 1.01);
+}
+
+@keyframes stopwatch {
+    0% {
+        max-width: 0px;
+        min-width: 0px;
+    }
+
+    100% {
+        max-width: 9999px;
+        min-width: none;
+    }
+}

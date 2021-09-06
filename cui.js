@@ -23,9 +23,6 @@ window.onclick = function(event) {
 function cuidroplist() {
   document.getElementById("cuidroplist").classList.toggle("listshow");
 }
-<<<<<<< Updated upstream
-=======
-
 
 /* 实现snackbar */
 function cuisnackbarshow() {
@@ -33,4 +30,3 @@ function cuisnackbarshow() {
   x.className = "show";
   setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
 }
->>>>>>> Stashed changes
