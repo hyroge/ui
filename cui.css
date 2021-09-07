@@ -214,6 +214,14 @@ a:hover {
     transition: 250ms;
 }
 
+@media only screen and (max-width:846px) {
+    .cui-button{
+       right: 40px;
+       left: 40px;
+       min-width: 300px;
+    }
+}
+
 /*用于下拉菜单*/
 
 .cui-dropmenu{
@@ -434,7 +442,7 @@ input-placeholder{
     min-width: 140px;
     height: 4px;
     border-radius: 10px;
-    animation: stopwatch 20s cubic-bezier(0.56, -0.02, 0.25, 1.01);
+    animation: stopwatch 60s cubic-bezier(0.56, -0.02, 0.25, 1.01);
 }
 
 @keyframes stopwatch {
