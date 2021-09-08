@@ -1,3 +1,4 @@
+
 /* 实现手机端tab展开 */
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
@@ -25,8 +26,10 @@ function cuidroplist() {
 }
 
 /* 实现snackbar */
+
 function cuisnackbarshow() {
   var x = document.getElementById("cuisnackbar")
   x.className = "show";
   setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
 }
+

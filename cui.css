@@ -1,450 +1,491 @@
+@charset "UTF-8";
+
 /* 欢迎使用connect UI */
 /* https://github.com/KAILUENG/connect-UI */
 
-body{
-    /* 用于保持页面有最基本的内间距 */
-    padding: 40px;
-    margin: 0px;
-    border-width: 0px;
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?1mgj5t');
+  src:  url('fonts/icomoon.eot?1mgj5t#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?1mgj5t') format('truetype'),
+    url('fonts/icomoon.woff?1mgj5t') format('woff'),
+    url('fonts/icomoon.svg?1mgj5t#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
 }
 
-.cui-if-use-tab{
-    margin-top: 100px;
+
+body {
+  /* 用于保持页面有最基本的内间距 */
+  padding: 40px;
+  margin: 0px;
+  border-width: 0px;
 }
 
-h1{
-    font-size: 60px;
-    margin: 0px;
-    font-weight: bolder;
+.cui-if-use-tab {
+  margin-top: 100px;
 }
 
-h2{
-    font-size: 40px;
-    font-weight: bolder;
-    margin: 0px;
+h1 {
+  font-size: 60px;
+  margin: 0px;
+  font-weight: bolder;
 }
 
-@media only screen and (max-width:500px) {
-    h1 {
-        font-size: 40px !important;
-    }
-    h2 {
-        font-size: 28px !important;
-    }
+h2 {
+  font-size: 40px;
+  font-weight: bolder;
+  margin: 0px;
 }
 
+@media only screen and (max-width: 500px) {
+  h1 {
+    font-size: 40px !important;
+  }
+
+  h2 {
+    font-size: 28px !important;
+  }
+}
 /* 用于顶栏 */
-
-.cui-tab{
-    backdrop-filter: blur(16px);
-    background-color: rgba(255, 255, 255, 0.555);
-    box-shadow: 0 2px 18px 0 rgb(0 0 0 / 7%);
-    z-index: 1000;
-    padding-top: 20px;
-    padding-right: 30px;
-    padding-bottom: 20px;
-    padding-left: 30px;
-    position: fixed;
-    top: 0px;
-    left: 0;
-    right: 0;
-    float: right;
-    transition-duration: 0.4s;
+.cui-tab {
+  -webkit-backdrop-filter: blur(16px);
+          backdrop-filter: blur(16px);
+  background-color: rgba(255, 255, 255, 0.555);
+  box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.07);
+  z-index: 1000;
+  padding-top: 20px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  right: 0;
+  float: right;
+  transition-duration: 0.4s;
 }
 
-.cui-LOGO-on-tab{
-    /* 用于文字LOGO，若要使用SVG的LOGO，请使用.cui-logosvg-on-tab */
-    float: left;
-    margin: 10px;
+.cui-LOGO-on-tab {
+  /* 用于文字LOGO，若要使用SVG的LOGO，请使用.cui-logosvg-on-tab */
+  float: left;
+  margin: 10px;
 }
 
-.cui-title-on-tab{
-    float: left;
-    cursor: pointer;
-    margin-right: 20px;
-    padding: 10px;
-    border-radius: 16px;
-    transition-timing-function: cubic-bezier(1, 0, 0.17, 1);
-    transition: 0.4s;
-    float: right;
+.cui-title-on-tab {
+  float: left;
+  cursor: pointer;
+  margin-right: 20px;
+  padding: 10px;
+  border-radius: 16px;
+  transition-timing-function: cubic-bezier(1, 0, 0.17, 1);
+  transition: 0.4s;
+  float: right;
+}
+.cui-title-on-tab:hover {
+  background-color: #f9f8f89d;
+  transition-timing-function: cubic-bezier(1, 0, 0.17, 1);
+  transition: 0.4s;
 }
 
-.cui-title-on-tab:hover{
-    background-color: #f9f8f89d;
-    transition-timing-function: cubic-bezier(1, 0, 0.17, 1);
-    transition: 0.4s;
-}
+@media only screen and (max-width: 846px) {
+  .cui-title-on-tab {
+    display: none;
+  }
 
-  @media only screen and (max-width:846px) {
-    .cui-title-on-tab {
-        display: none;
-    }
-    .cui-mobie-tab{
-        display: block;
-    }
+  .cui-mobie-tab {
+    display: block;
+  }
 }
-
 /* 用于移动端tab栏的弹出菜单 */
 .dropmenu {
-    display: none;
-    background-color: #ffffff00;
-    color: rgb(0, 0, 0);
-    padding: 10px;
-    font-size: 28px;
-    border: none;
+  display: none;
+  background-color: #ffffff00;
+  color: black;
+  padding: 10px;
+  font-size: 28px;
+  border: none;
 }
 
-@media only screen and (max-width:846px) {
-    .dropmenu {
-        display: block;
-    }
+@media only screen and (max-width: 846px) {
+  .dropmenu {
+    display: block;
+  }
 }
-
 .dropbtn:hover, .dropbtn:focus {
-    background-color: #ffffff;
+  background-color: #ffffff;
 }
 
-.dropdown{
-    float: right;
+.dropdown {
+  float: right;
 }
 
 .dropmenu {
-    float: right;
-    position: relative;
+  float: right;
+  position: relative;
 }
-
 .dropmenu a:hover {
-    background-color: #f1f1f1
+  background-color: #f1f1f1;
 }
 
 .dropmenu-content {
-    visibility: hidden;
-    opacity: 0;
-    transform:scale(1,0.8);
-    max-height: 0;
-    position: absolute;
-    background-color: #ffffff;
-    border-radius: 16px;
-    min-width: 340px;
-    overflow: auto;
-    box-shadow: 0 2px 18px 0 rgb(0 0 0 / 7%);
-    right: 0;
-    z-index: 1;
-    margin-right: 10px;
-    margin-top: 50px;
-    transition-duration: 0.4s;
-    transition-timing-function: cubic-bezier(0.6, 0.02, 0, 1.01);
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(1, 0.8);
+  max-height: 0;
+  position: absolute;
+  background-color: #ffffff;
+  border-radius: 16px;
+  min-width: 340px;
+  overflow: auto;
+  box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.07);
+  right: 0;
+  z-index: 1;
+  margin-right: 10px;
+  margin-top: 50px;
+  transition-duration: 0.4s;
+  transition-timing-function: cubic-bezier(0.6, 0.02, 0, 1.01);
 }
 
 a {
-    color: black;
-    padding: 12px 16px;
-    border-radius: 16px;
-    text-decoration: none;
-    display: block;
-    margin: 10px;
-    transition-duration: 240ms;
+  color: black;
+  padding: 12px 16px;
+  border-radius: 16px;
+  text-decoration: none;
+  display: block;
+  margin: 10px;
+  transition-duration: 240ms;
 }
-
 a:hover {
-    background-color: whitesmoke;
+  background-color: whitesmoke;
+  background-color: whitesmoke;
 }
-
-
-
-a:hover {
-    background-color: whitesmoke;
-}
-
 
 .show {
-    visibility: visible;
-    opacity: 1;
-    transition-duration: 0.4s;
-    transition-timing-function: cubic-bezier(0.6, 0.02, 0, 1.01);
-    max-height: 666px;
-    transform:none;
+  visibility: visible;
+  opacity: 1;
+  transition-duration: 0.4s;
+  transition-timing-function: cubic-bezier(0.6, 0.02, 0, 1.01);
+  max-height: 666px;
+  transform: none;
 }
+
 /* 按钮 */
-.cui-round-button{
-    padding: 10px;
-    background-color:#3BA4FF ;
-    border-radius: 100000px;
-    border: 0px;
-    cursor: pointer;
-    height: 60px;
-    width: 60px;
-    transition-duration: 0.4s;
-    margin-top: 20px;
-    margin-bottom: 20px;
+.cui-round-button {
+  padding: 10px;
+  background-color: #3BA4FF;
+  border-radius: 100000px;
+  border: 0px;
+  cursor: pointer;
+  height: 60px;
+  width: 60px;
+  transition-duration: 0.4s;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.cui-round-button:hover {
+  transition-duration: 0.4s;
+  box-shadow: 0 8px 43px 0 rgba(0, 0, 0, 0.13);
+  background-color: #2298ff;
+}
+.cui-round-button:active {
+  transform: none;
+  transform: scale(0.98, 0.98);
 }
 
-.cui-round-button:hover{
-    transition-duration: 0.4s;
-    box-shadow: 0 8px 43px 0 rgb(0 0 0 / 13%);
-    background-color:#2298ff ;
+.cui-button {
+  padding: 10px;
+  background-color: #3BA4FF;
+  border-radius: 8px;
+  border: 0px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+.cui-button:hover {
+  transition-duration: 0.4s;
+  box-shadow: 0 8px 43px 0 rgba(0, 0, 0, 0.13);
+  transform: scale(1.01, 1.01);
+}
+.cui-button:active {
+  transform: none;
+  transition: 250ms;
 }
 
-.cui-round-button:active{
-    transform: none;
-    transform: scale(0.98,0.98);
+@media only screen and (max-width: 846px) {
+  .cui-button {
+    right: 40px;
+    left: 40px;
+    min-width: 100%;
+  }
 }
-
-.cui-button{
-    padding: 10px;
-    background-color:#3BA4FF ;
-    border-radius: 8px;
-    border: 0px;
-    cursor: pointer;
-    transition-duration: 0.4s;
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-}
-
-.cui-button:hover{
-    transition-duration: 0.4s;
-    box-shadow: 0 8px 43px 0 rgb(0 0 0 / 13%);
-    background-color:#2298ff ;
-    transform: scale(1.01,1.01);
-}
-
-.cui-button:active{
-    transform: none;
-    transition: 250ms;
-}
-
 /*用于下拉菜单*/
-
-.cui-dropmenu{
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-    border-radius: 8px;
-    padding: 10px;
-    font-size: 20px;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 2px 18px 0 rgb(0 0 0 / 7%);
-    margin-top: 20px;
-    margin-bottom: 20px;
-    transition: 250ms;
+.cui-dropmenu {
+  background-color: #ffffff;
+  color: black;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.07);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  transition: 250ms;
 }
 
+@media only screen and (max-width: 846px){
+  .cui-dropmenu{  
+    right: 40px;
+    left: 40px;
+    min-width: 100%;}
+}
 .cui-dropmenu-content {
-    visibility: hidden;
-    opacity: 0;
-    max-height: 0px;
-    position: absolute;
-    background-color: #ffffff;
-    backdrop-filter: blur(16px);
-    background-color: hsla(0, 0%, 100%, .92);
-    border-radius: 16px;
-    min-width: 300px;
-    overflow: auto;
-    box-shadow: 0 2px 18px 0 rgb(0 0 0 / 7%);
-    z-index: 1;
-    transition-duration: 0.4s;
-    transition-timing-function: cubic-bezier(0.6, 0.02, 0, 1.01);
-    margin-top: 10px;
-    overflow:hidden;
-    transform: scale(1,0.8);
-    overflow:hidden;
-    transform: scale(1,0.8);
-    margin-top: -8px;
+  visibility: hidden;
+  opacity: 0;
+  max-height: 0px;
+  position: absolute;
+  background-color: #ffffff;
+  -webkit-backdrop-filter: blur(16px);
+          backdrop-filter: blur(16px);
+  background-color: rgba(255, 255, 255, 0.92);
+  border-radius: 16px;
+  min-width: 300px;
+  overflow: auto;
+  box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.07);
+  z-index: 1;
+  transition-duration: 0.4s;
+  transition-timing-function: cubic-bezier(0.6, 0.02, 0, 1.01);
+  margin-top: 10px;
+  overflow: hidden;
+  transform: scale(1, 0.8);
+  overflow: hidden;
+  transform: scale(1, 0.8);
+  margin-top: -8px;
 }
 
 .listshow {
-    visibility: visible;
-    opacity: 1;
-    max-height: 600px;
-    transform: none;
-    transition-duration: 0.4s;
-    transition-timing-function: cubic-bezier(0.6, 0.02, 0, 1.01);
+  visibility: visible;
+  opacity: 1;
+  max-height: 600px;
+  transform: none;
+  transition-duration: 0.4s;
+  transition-timing-function: cubic-bezier(0.6, 0.02, 0, 1.01);
 }
 
-
-.cui-dropmenu:hover{
-    transition-duration: 0.4s;
-    box-shadow: 0 8px 43px 0 rgb(0 0 0 / 13%);
-    transform: scale(1.01,1.01);
+.cui-dropmenu:hover {
+  transition-duration: 0.4s;
+  box-shadow: 0 8px 43px 0 rgba(0, 0, 0, 0.13);
+  transform: scale(1.01, 1.01);
 }
 
-.cui-dropmenu:active{
-    transform: none;
-    transform: scale(0.98,0.98);
+.cui-dropmenu:active {
+  transform: none;
+  transform: scale(0.98, 0.98);
 }
 
-
-.cui-pop-up-prompt{
-    background-color: #F8BD34;
-    color: white;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    display:block;
-    transition-duration: 0.4s;
-    transition-timing-function: cubic-bezier(0.6, 0.02, 0, 1.01);
-    max-height: 100px;
+.cui-pop-up-prompt {
+  background-color: #F8BD34;
+  color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  display: block;
+  transition-duration: 0.4s;
+  transition-timing-function: cubic-bezier(0.6, 0.02, 0, 1.01);
+  max-height: 100px;
 }
 
-.cui-parendisplay{
-    float: right;
-    cursor: pointer;
-
+.cui-parendisplay {
+  float: right;
+  cursor: pointer;
 }
 
 #cuisnackbar {
-    visibility: hidden;
-    box-shadow: 0 2px 18px 0 rgb(0 0 0 / 7%);
-    backdrop-filter: blur(16px);
-    background-color: rgba(255, 255, 255, 0.555);
-    color: rgb(0, 0, 0);
-    text-align: center;
-    border-radius: 2px;
-    padding: 16px;
-    position: fixed;
-    z-index: 1;
-    bottom: 30px;
-    font-size: 17px;
-    transition-duration: 0.4s;
-    transition-timing-function: cubic-bezier(0.6, 0.02, 0, 1.01);
-    opacity: 0;
-    max-height: 0px;
-    transform: scale(1,0.8);
-    border-radius: 16px;
-    min-width: 300px;
+  visibility: hidden;
+  box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.07);
+  -webkit-backdrop-filter: blur(16px);
+          backdrop-filter: blur(16px);
+  background-color: rgba(255, 255, 255, 0.555);
+  color: black;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  bottom: 30px;
+  font-size: 17px;
+  transition-duration: 0.4s;
+  transition-timing-function: cubic-bezier(0.6, 0.02, 0, 1.01);
+  opacity: 0;
+  max-height: 0px;
+  transform: scale(1, 0.8);
+  border-radius: 16px;
+  min-width: 300px;
 }
-
 #cuisnackbar.show {
-    visibility: visible;
-    opacity: 1;
-    max-height: 600px;
-    transform: none;
+  visibility: visible;
+  opacity: 1;
+  max-height: 600px;
+  transform: none;
 }
 
-@media only screen and (max-width:846px) {
-    #cuisnackbar {
-        right: 20px;
-        left: 20px;
-    }
+@media only screen and (max-width: 846px) {
+  #cuisnackbar {
+    right: 20px;
+    left: 20px;
+  }
+}
+.cui-input {
+  padding: 14px;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px;
+  border-style: solid;
+  border-color: #EFEFEF;
+  min-width: 350px;
+  outline: none;
+  transition-duration: 0.2s;
 }
 
-.cui-input{
-    padding: 14px;
-    background-color: white;
-    border-radius: 8px;
-    border: 1px;
-    border-style: solid;
-    border-color: #EFEFEF;
-    min-width: 350px;
-    outline: none;
-    transition-duration: 0.2s;
-}
-.cui-input-color{
-    padding: 8px;
-    background-color: white;
-    border-radius: 8px;
-    border: 1px;
-    border-style: solid;
-    border-color: #EFEFEF;
-    min-width: 50px;
-    outline: none;
-    transition-duration: 0.2s;
-    min-height: 50px;
+
+@media only screen and (max-width: 846px) {
+  .cui-input {
+    min-width: 100%;
+  }
 }
 
-.cui-input:focus{
-    border-color: #3BA4FF;
-    border-width: 3px;
-}
-.cui-p-input{
-    font-weight: bolder;
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-@media only screen and (max-width:846px) {
-    .cui-input{
-        min-width: max-content;
-}
-}
-input-placeholder{
-    font-weight:unset;
-    color: #EFEFEF;
+.cui-input-color {
+  padding: 8px;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px;
+  border-style: solid;
+  border-color: #EFEFEF;
+  min-width: 50px;
+  outline: none;
+  transition-duration: 0.2s;
+  min-height: 50px;
 }
 
-::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    font-weight:unset;
-    color: #EFEFEF;
+.cui-input:focus {
+  border-color: #3BA4FF;
+  border-width: 3px;
 }
-:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    font-weight:unset;
-    color: #EFEFEF;
+
+.cui-input-color:focus{
+  border-color: #3BA4FF;
+  border-width: 3px;
 }
-::-moz-placeholder { /* Mozilla Firefox 19+ */
-    font-weight:unset;
-    color: #EFEFEF;
+
+.cui-p-input {
+  font-weight: bolder;
+  font-size: 20px;
+  margin-bottom: 10px;
 }
-::-ms-input-placeholder { /* Internet Explorer 10-11 */
-    font-weight:unset;
-    color: #EFEFEF;
+
+
+
+::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  font-weight: unset;
+  color: #EFEFEF;
 }
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  font-weight: unset;
+  color: #EFEFEF;
+}
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  font-weight: unset;
+  color: #EFEFEF;
+}
+
+::-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  font-weight: unset;
+  color: #EFEFEF;
+}
+
 
 .cui-loading {
-    border: 2px solid #EFEFEF;
-    border-radius: 50%;
-    border-top: 2px solid #3BA4FF;
-    width: 40px;
-    height: 40px;
-    -webkit-animation: loading 2s cubic-bezier(0.56, -0.02, 0.25, 1.01) infinite;
-    animation: loading 2s cubic-bezier(0.56, -0.02, 0.25, 1.01) infinite;
+  border: 2px solid #EFEFEF;
+  border-radius: 50%;
+  border-top: 2px solid #3BA4FF;
+  width: 40px;
+  height: 40px;
+  -webkit-animation: loading 2s cubic-bezier(0.56, -0.02, 0.25, 1.01) infinite;
+  animation: loading 2s cubic-bezier(0.56, -0.02, 0.25, 1.01) infinite;
 }
 
 @-webkit-keyframes loading {
-    0% {
-        -webkit-transform: rotate(0deg);
-    }
-
-
-    100% {
-        -webkit-transform: rotate(360deg);
-    }
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
 }
-
 @keyframes loading {
-    0% {
-        transform: rotate(0deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.cui-stopwatch {
+  background-color: #EFEFEF;
+  min-width: 140px;
+  height: 4px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
 
-    100% {
-        transform: rotate(360deg);
-    }
+.cui-stopwatch-advance {
+  background-color: #3BA4FF;
+  min-width: 140px;
+  height: 4px;
+  border-radius: 10px;
+  -webkit-animation: stopwatch 60s cubic-bezier(0.56, -0.02, 0.25, 1.01);
+          animation: stopwatch 60s cubic-bezier(0.56, -0.02, 0.25, 1.01);
 }
-.cui-stopwatch{
-    background-color: #EFEFEF;
-    min-width: 140px;
-    height: 4px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-radius: 10px;
-}
-.cui-stopwatch-advance{
-    background-color: #3BA4FF;
-    min-width: 140px;
-    height: 4px;
-    border-radius: 10px;
-    animation: stopwatch 20s cubic-bezier(0.56, -0.02, 0.25, 1.01);
+
+@-webkit-keyframes stopwatch {
+  0% {
+    max-width: 0px;
+    min-width: 0px;
+  }
+  100% {
+    max-width: 9999px;
+    min-width: none;
+  }
 }
 
 @keyframes stopwatch {
-    0% {
-        max-width: 0px;
-        min-width: 0px;
-    }
-
-    100% {
-        max-width: 9999px;
-        min-width: none;
-    }
+  0% {
+    max-width: 0px;
+    min-width: 0px;
+  }
+  100% {
+    max-width: 9999px;
+    min-width: none;
+  }
+}
+.cui-right{
+  font-family: 'icomoon' !important;
+  font-size: 30px;
+}
+.cui-wrong{
+  font-family: 'icomoon' !important;
+  font-size: 30px;
+  font-weight: 400px;
 }
