@@ -36,7 +36,7 @@
     </div>
     <div class="cui-pop-up-prompt">
       本页用于测试新特性，如果需要反馈问题，请前往discussions
-      <span class="cui-parendisplay" onclick="this.parentElement.style.display='none'">X</span>
+      <span class="cui-parendisplay" onclick="this.parentElement.style.display='none'"></span>
     </div>
     <h1> 测试 </h1>
     <h2>测试测试测试</h2>
@@ -63,23 +63,23 @@
         <form>
           <p class="cui-p-input">密码</p> <input  class="cui-input" type="password" name="password" placeholder="密码" aria-label="请在此处输入密码">
         </form>
-        <p>看起来我们遇到了一些技术难题，这将会在下一个版本修复。</p>
         <form>
           <p class="cui-p-input">选色</p> <input  class="cui-input-color" type="color" name="color" placeholder="选色器" aria-label="在此处选择颜色">
         </form>
-        <form>
-          <p class="cui-p-input">checkbox</p> <input class="cui-input-checkbox" type="checkbox" name="checkbox" placeholder="检查表" aria-label="选择是否启用" checked="checked">
-          <i class="cui-checkedbox"></i>
-        </form>
-        <p>嗯......check表单还在测试，我们将会尽快推送更多的特性。</p>
+
+        <div class='cui-checkbox'>
+          <input type='checkbox' id='checkbox1' name='checkboox[]'>
+          <label for='checkbox1'>GOOD JOB!</label>
+        </div>
+
         <h2>加载</h2>
         <div class="cui-loading"></div>
         <div class="cui-stopwatch">
           <div class="cui-stopwatch-advance"></div>
         </div>
         <h2>icons</h2>
-        <span class="cui-right"> 礼物！</span>
-        <span class="cui-wrong"> 有意思！</span>
+        <span class="cui-right"></span>
+        <span class="cui-wrong"></span>
         <p>很高兴告诉各位，互通设计的图标也将会慢慢字体化，使用会更便利。</p>
   </body>
 </html>

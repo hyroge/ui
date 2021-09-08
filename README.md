@@ -4,5 +4,3 @@
 
 我们欢迎各位一同构建全新的互通设计和connect UI，互通设计与connect UI均以CC 1.0 协议进行许可。
 * 目前，connect UI仍在早期版本，我们不推荐您使用。
-![Web 1920 – 6](https://user-images.githubusercontent.com/54568547/132507074-18bb3ba2-cce0-4f83-8ba6-355888d44fb5.png)
-欢迎成为connecter中的一员！

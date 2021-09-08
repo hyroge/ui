@@ -50,10 +50,9 @@ h2 {
 }
 /* 用于顶栏 */
 .cui-tab {
-  -webkit-backdrop-filter: blur(16px);
-          backdrop-filter: blur(16px);
-  background-color: rgba(255, 255, 255, 0.555);
-  box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.07);
+  -webkit-backdrop-filter: blur(22px);
+  backdrop-filter: blur(22px);
+  background-color: rgb(255 255 255 / 85%);
   z-index: 1000;
   padding-top: 20px;
   padding-right: 30px;
@@ -65,6 +64,8 @@ h2 {
   right: 0;
   float: right;
   transition-duration: 0.4s;
+  border-bottom: 1px;
+  border-color: black;
 }
 
 .cui-LOGO-on-tab {
@@ -204,6 +205,7 @@ a:hover {
   font-size: 20px;
   font-weight: bold;
   color: white;
+  margin-bottom: 20px;
 }
 .cui-button:hover {
   transition-duration: 0.4s;
@@ -217,9 +219,7 @@ a:hover {
 
 @media only screen and (max-width: 846px) {
   .cui-button {
-    right: 40px;
-    left: 40px;
-    min-width: 100%;
+    width: 100%;
   }
 }
 /*用于下拉菜单*/
@@ -240,10 +240,9 @@ a:hover {
 
 @media only screen and (max-width: 846px){
   .cui-dropmenu{  
-    right: 40px;
-    left: 40px;
-    min-width: 100%;}
+    width: 100%;}
 }
+
 .cui-dropmenu-content {
   visibility: hidden;
   opacity: 0;
@@ -303,6 +302,8 @@ a:hover {
 .cui-parendisplay {
   float: right;
   cursor: pointer;
+  font-family: 'icomoon' !important;
+  font-size: 20px;
 }
 
 #cuisnackbar {
@@ -355,7 +356,8 @@ a:hover {
 
 @media only screen and (max-width: 846px) {
   .cui-input {
-    min-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
   }
 }
 
@@ -414,6 +416,59 @@ a:hover {
   color: #EFEFEF;
 }
 
+.cui-checkbox {
+  position: relative;
+  height: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.cui-checkbox input[type='checkbox'] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+}
+.cui-checkbox label {
+  position: absolute;
+  left: 30px;
+  top: 0;
+  height: 20px;
+  line-height: 20px;
+}
+.cui-checkbox label:before {
+  content: ' ';
+  position: absolute;
+  left: -30px;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #EFEFEF;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+}
+
+.cui-checkbox label:after {
+  content: '';
+  position: absolute;
+  left: -23.5px;
+  top: 2.2px;
+  width: 6px;
+  height: 12px;
+  border: 0;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  font-family: 'icomoon' !important;
+  font-size: 12px;
+  font-weight: 600;
+}
+.cui-checkbox input[type='checkbox']:checked + label:before {
+  background: #3BA4FF;
+  border-color: #3BA4FF;
+}
 
 .cui-loading {
   border: 2px solid #EFEFEF;
@@ -441,6 +496,7 @@ a:hover {
     transform: rotate(360deg);
   }
 }
+
 .cui-stopwatch {
   background-color: #EFEFEF;
   min-width: 140px;
@@ -487,5 +543,4 @@ a:hover {
 .cui-wrong{
   font-family: 'icomoon' !important;
   font-size: 30px;
-  font-weight: 400px;
 }
