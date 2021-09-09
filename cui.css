@@ -370,7 +370,6 @@ a:hover {
   border: 1px;
   border-style: solid;
   border-color: #EFEFEF;
-  min-width: 350px;
   outline: none;
   transition-duration: 0.2s;
 }
