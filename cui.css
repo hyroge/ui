@@ -172,8 +172,7 @@ a {
   transition-duration: 240ms;
 }
 a:hover {
-  background-color: whitesmoke;
-  background-color: whitesmoke;
+  background-color: rgba(202, 202, 202, 0.158);
 }
 
 .show {
@@ -186,32 +185,11 @@ a:hover {
 }
 
 /* 按钮 */
-.cui-round-button {
-  padding: 10px;
-  background-color: #3BA4FF;
-  border-radius: 100000px;
-  border: 0px;
-  cursor: pointer;
-  height: 60px;
-  width: 60px;
-  transition-duration: 0.4s;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-.cui-round-button:hover {
-  transition-duration: 0.4s;
-  box-shadow: 0 8px 43px 0 rgba(0, 0, 0, 0.13);
-  background-color: #2298ff;
-}
-.cui-round-button:active {
-  transform: none;
-  transform: scale(0.98, 0.98);
-}
 
 .cui-button {
   padding: 10px;
-  background-color: #3BA4FF;
-  border-radius: 8px;
+  background-color: #5395FD;
+  border-radius: 16px;
   border: 0px;
   cursor: pointer;
   transition-duration: 0.4s;
@@ -219,6 +197,7 @@ a:hover {
   font-weight: bold;
   color: white;
   margin-bottom: 20px;
+  transition-timing-function: cubic-bezier(1, -0.01, 0, 1.01);
 }
 .cui-button:hover {
   transition-duration: 0.4s;
@@ -237,18 +216,21 @@ a:hover {
 }
 /*用于下拉菜单*/
 .cui-dropmenu {
-  background-color: #ffffff;
+  background-color: white;
   color: black;
+  box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.07);
   font-weight: bold;
-  border-radius: 8px;
+  border-radius: 16px;
   padding: 10px;
   font-size: 20px;
   border: none;
   cursor: pointer;
-  box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.07);
   margin-bottom: 20px;
   transition: 250ms;
+  width: 300px;
+  text-align: left;
 }
+
 
 .cui-droplist-space{
   width: 20%;
@@ -259,7 +241,9 @@ a:hover {
 
 @media only screen and (max-width: 846px){
   .cui-dropmenu{  
-    width: 100%;}
+    width: 100% !important;
+    text-align: center;
+  }
 }
 
 .cui-dropmenu-content {
@@ -278,12 +262,21 @@ a:hover {
   z-index: 1;
   transition-duration: 0.4s;
   transition-timing-function: cubic-bezier(0.6, 0.02, 0, 1.01);
-  margin-top: 10px;
+  margin-top: -8px;
   overflow: hidden;
   transform: scale(1, 0.8);
   overflow: hidden;
   transform: scale(1, 0.8);
 }
+
+@media only screen and (max-width: 846px){
+  .cui-dropmenu-content{  
+    position: unset;
+    margin-bottom: 10px;
+    transition-duration: 0.6s !important;
+  }
+}
+
 .cui-icons{
   font-family: 'OUR-icons' !important;
   margin-right: 10px;
@@ -294,10 +287,14 @@ a:hover {
   opacity: 1;
   max-height: 600px;
   transform: none;
-  transition-duration: 0.4s;
+  transition-duration: 0.6s;
   transition-timing-function: cubic-bezier(0.6, 0.02, 0, 1.01);
 }
-
+@media only screen and (max-width: 846px){
+  .listshow{  
+    transition-timing-function: cubic-bezier(0.56, 0.01, 0.47, 1);
+  }
+}
 .cui-dropmenu:hover {
   transition-duration: 0.4s;
   box-shadow: 0 8px 43px 0 rgba(0, 0, 0, 0.13);
@@ -310,8 +307,8 @@ a:hover {
 }
 
 .cui-pop-up-prompt {
-  background-color: #F8BD34;
-  color: white;
+  background-color: #FFD83A;
+  color: rgb(0, 0, 0);
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 8px;
@@ -397,12 +394,12 @@ a:hover {
 }
 
 .cui-input:focus {
-  border-color: #3BA4FF;
+  border-color: #5395FD;
   border-width: 3px;
 }
 
 .cui-input-color:focus{
-  border-color: #3BA4FF;
+  border-color: #5395FD;
   border-width: 3px;
 }
 
@@ -489,14 +486,45 @@ a:hover {
   font-weight: 600;
 }
 .cui-checkbox input[type='checkbox']:checked + label:before {
-  background: #3BA4FF;
-  border-color: #3BA4FF;
+  background: #5395FD;
+  border-color: #5395FD;
+}
+.cui-input-range{
+  -webkit-appearance: none;
+  overflow:hidden;     
+  width:250px;
+  height:16px;
+  outline : none;      
+  background:#5395FD;
+  padding: 8px;
+  border-radius: 100px;
+  box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.07);
 }
 
+.cui-input-range::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  position: relative;    
+  width:18px;
+  height:18px;
+  background:white;
+  border-radius:50%; 
+  padding: 1px;
+}
+
+.cui-input-range::-webkit-slider-thumb:before,
+.cui-input-range::-webkit-slider-thumb:after
+{
+  position: absolute;
+  top: 3px;
+  width: 2000px;
+  height: 4px;
+  pointer-events: none;
+  padding: 1px;
+}
 .cui-loading {
   border: 2px solid #EFEFEF;
   border-radius: 50%;
-  border-top: 2px solid #3BA4FF;
+  border-top: 2px solid #5395FD;
   width: 40px;
   height: 40px;
   -webkit-animation: loading 2s cubic-bezier(0.56, -0.02, 0.25, 1.01) infinite;
@@ -530,7 +558,7 @@ a:hover {
 }
 
 .cui-stopwatch-advance {
-  background-color: #3BA4FF;
+  background-color: #5395FD;
   min-width: 140px;
   height: 4px;
   border-radius: 10px;
@@ -564,3 +592,4 @@ a:hover {
   font-family: 'OUR-icons' !important;
   font-size: 30px;
 }
+

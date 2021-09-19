@@ -8,7 +8,7 @@
     <script src="cui.js" defer></script>
     <title>测试页面</title>
 </head>
-<body class="cui-if-use-tab">
+<body class="cui-if-use-tab" oncontextmenu="openmenu(event)">
 
     <div class="cui-tab">
         <h2 class="cui-LOGO-on-tab">测试 LOGO (文字)</h2>
@@ -71,13 +71,24 @@
           <input type='checkbox' id='checkbox1' name='checkboox[]'>
           <label for='checkbox1'>GOOD JOB!</label>
         </div>
+        <div class='cui-checkbox'>
+          <input type='checkbox' id='checkbox2' name='checkboox[]'>
+          <label for='checkbox2'>GOOD JOB!</label>
+        </div>
+        <div class='cui-checkbox'>
+          <input type='checkbox' id='checkbox3' name='checkboox[]'>
+          <label for='checkbox3'>GOOD JOB!</label>
+        </div>
+        <div class='cui-checkbox'>
+          <input type='checkbox' id='checkbox4' name='checkboox[]'>
+          <label for='checkbox4'>GOOD JOB!</label>
+        </div>
 
         <form>
           <p class="cui-p-input">滑块</p>
           <p class="cui-p-input">连续滑块</p>
-          <label class=".cui-input-slider">
-          <input type="range" step="0.1" min="0" max="100">
-          <p>我们仍在尝试更多的表单功能，滑块暂未完成。</p>
+          <input type="range" min="0" max="100" step="1" value="50" class="cui-input-range">
+          <p>我们仍在尝试更多的表单功能，还有一些形式的滑块暂未完成。</p>
         </form>
 
         <h2>加载</h2>
