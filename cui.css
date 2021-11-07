@@ -123,6 +123,13 @@ body {
   margin-top: 100px;
   padding-left: 28vh;
 }
+@media only screen and (max-width: 846px){
+  .cui-if-use-tab-and-sidebar {
+    margin-top: 100px;
+    padding-left: 40px;
+}
+}
+
 
 h1 {
   font-size: 60px;
@@ -134,6 +141,9 @@ h2 {
   font-size: 40px;
   font-weight: bolder;
   margin: 0px;
+}
+p{
+  line-height: 26px;
 }
 
 @media only screen and (max-width: 500px) {
@@ -409,7 +419,7 @@ a:hover {
   float: right;
   cursor: pointer;
   font-family: 'OUR-icons' !important;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 #cuisnackbar {
@@ -515,6 +525,11 @@ a:hover {
   margin-top: 10px;
 }
 
+input::-webkit-input-placeholder{
+  font-weight: bold;
+}
+
+
 
 @media only screen and (max-width: 846px) {
   .cui-input {
@@ -523,6 +538,11 @@ a:hover {
   }
 }
 
+@media only screen and (max-width: 846px) {
+  .cui-sidebar {
+    display: none !important;
+  }
+}
 .cui-input-color {
   padding: 8px;
   background-color: white;
@@ -842,15 +862,15 @@ a:hover {
   margin: 0 auto;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 846px) {
   .cui-card-group{
-    flex-direction: column
+    display: none !important;
   }
 }
 
 
 .cui-sidebar{
-  width: 24vh;
+  width: 22vh;
   background-color: white;
   position: unset;
   display: -ms-flexbox;
@@ -865,8 +885,25 @@ a:hover {
   margin-left: -28vh;
   margin-top: -28px;
   padding: 20px;
+  overflow-x:scroll
 }
 
+@media only screen and (max-height:1000px) {
+  .cui-sidebar{
+    width: 200px !important;
+    margin-left: -280px !important;
+  }
+  .cui-if-use-tab-and-sidebar {
+    padding-left: 280px !important;
+  }
+}
+@media only screen and (max-height:851px) {
+
+  .cui-if-use-tab-and-sidebar {
+    margin-top: 100px !important;
+    padding-left: 40px !important;
+  }
+}
 .cui-a-active{
   background-color: #5395FD;
   color: white;
@@ -883,6 +920,17 @@ a:hover {
   margin-bottom: 10px;
   line-height: 14px;
 }
+.for-slider-working-table{
+  border-radius: 0px;
+  margin: 0px;
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  line-height: 14px;
+  margin-bottom: 4px;
+}
 
 .cui-sidebar-tips{
   bottom: 0;
@@ -893,4 +941,7 @@ a:hover {
 
 .for-checkbox-allround{
   border-radius: 50%;
+}
+.search{
+  font-family: 'OUR-FONT-ICON' !important;
 }
