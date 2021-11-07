@@ -8,7 +8,7 @@
     <script src="cui.js" defer></script>
     <title>测试页面</title>
 </head>
-<body class="cui-if-use-tab" oncontextmenu="openmenu(event)">
+<body class="cui-if-use-tab-and-sidebar" oncontextmenu="openmenu(event)">
 
     <div class="cui-tab">
         <h2 class="cui-LOGO-on-tab">测试 LOGO (文字)</h2>
@@ -34,6 +34,28 @@
               </div>
             </div>
     </div>
+
+    <div class="cui-sidebar">
+      <h2>中台</h2>
+      <input  class="cui-input" type="text" name="text" placeholder="搜索" aria-label="请在此处搜索" style="margin-bottom: 10px; ;">
+              <a href="#home" class="cui-a-active for-slider"> <span class="cui-our-font"></span> Home</a>
+              <a href="#about"class="for-slider"> <span class="cui-our-font"></span>About</a>
+              <a href="#contact" class="for-slider"> <span class="cui-our-font"></span>Contact</a>
+              <a href="#contact" class="for-slider"> <span class="cui-our-font"></span>Contact</a>
+              <a href="#contact" class="for-slider"> <span class="cui-our-font"></span>Contact</a>
+              <a href="#contact" class="for-slider"> <span class="cui-our-font"></span>Contact</a>
+              <a href="#contact" class="for-slider"> <span class="cui-our-font"></span>Contact</a>
+              <a href="#contact" class="for-slider"> <span class="cui-our-font"></span>Contact</a>
+              <a href="#contact"class="for-slider" > <span class="cui-our-font"></span>Contact</a>
+              <a href="#contact" class="for-slider"> <span class="cui-our-font"></span>Contact</a>
+              <a href="#contact" class="for-slider"> <span class="cui-our-font"></span>Contact</a>
+              <a href="#contact" class="for-slider"> <span class="cui-our-font"></span>Contact</a>
+              <a href="#contact" class="for-slider"> <span class="cui-our-font"></span>Contact</a>
+              <a href="#contact" class="for-slider"> <span class="cui-our-font"></span>Contact</a>
+      <p class="cui-sidebar-tips">中台小提示，好用和好用</p>
+  </div>
+
+
     <div class="cui-pop-up-prompt">
       本页用于测试新特性，如果需要反馈问题，请前往discussions
       <span class="cui-parendisplay" onclick="this.parentElement.style.display='none'"></span>
@@ -42,6 +64,7 @@
     <h2>测试测试测试</h2>
     <p>众多组件和特色，都在互通设计内，我们期待您的加入，我们知道我们做不到由一个团队完成一个庞大的设计标准，因此，我们邀请您共建互通设计， 一同设计互通设计的各个组件和布局，完善互通设计的web组件包，一同前进吧。我们欢迎各位一同构建全新的互通设计和Connect UI，互通设计与Connect UI均以CC 1.0 协议进行许可。</p>
     <button class="cui-button">欢迎使用Connect UI</button>
+    <button class="cui-button"><span class="cui-our-font"></span>欢迎使用Connect UI</button>
 
     <div class="cui-dropdownbutton">
         <button onclick="cuidroplist()" class="cui-dropmenu">下拉菜单</button>
@@ -53,8 +76,12 @@
         </div>
 
         <button onclick="cuisnackbarshow()" class="cui-button">显示 Snackbar</button>
+        <button onclick="cuisnackbarshowyellow()" class="cui-button">显示 Snackbar(y)</button>
+        <button onclick="cuisnackbarshowred()" class="cui-button">显示 Snackbar(r)</button>
 
         <div id="cuisnackbar"> 从结果看过程是不合理的</div>
+        <div id="cuisnackbaryellow"> 从结果看过程是不合理的</div>
+        <div id="cuisnackbarred"> 从结果看过程是不合理的</div>
 
         <h2>input元素</h2>
         <form>
@@ -89,6 +116,26 @@
           <label for='switch'></label>
       </div>
 
+      <div class="cui-radio-group vertical">
+
+      <label>
+          <input type="radio" name="1" id="" class="cui-input-radio-self">
+          <span class="cui-input-radio"></span>好
+      </label>
+      
+      <label>
+          <input type="radio" name="1" id="" class="cui-input-radio-self">
+          <span class="cui-input-radio"></span>很好
+      </label>
+      
+      <label>
+          <input type="radio" name="1" id="" class="cui-input-radio-self">
+          <span class="cui-input-radio"></span>很棒
+      </label>
+
+      </div>
+
+
         <form>
           <p class="cui-label-input">滑块</p>
           <p class="cui-label-input">连续滑块</p>
@@ -102,41 +149,40 @@
           <div class="cui-stopwatch-advance"></div>
         </div>
         <h2>info card</h2>
+        <div class="cui-card-group">
         <div class="cui-info-card">
-          <img src="https://pic.imgdb.cn/item/613b57c344eaada73933c045.jpg" class="cui-auto-img-card">
           <h3>
             过去的，已经过去，现在的，还在发生。
           </h3>
           <p>卡片永远都是好的，我们欢迎各位一同构建全新的互通设计和Connect UI，互通设计与Connect UI均以CC 1.0 协议进行许可。</p>
         </div>
         <div class="cui-info-card">
-          <img src="https://pic.imgdb.cn/item/613b57c344eaada73933c045.jpg" class="cui-auto-img-card">
           <h3>
             过去的，已经过去，现在的，还在发生。
           </h3>
           <p>卡片永远都是好的，我们欢迎各位一同构建全新的互通设计和Connect UI，互通设计与Connect UI均以CC 1.0 协议进行许可。</p>
         </div>
         <div class="cui-info-card">
-          <img src="https://pic.imgdb.cn/item/613b57c344eaada73933c045.jpg" class="cui-auto-img-card">
           <h3>
             过去的，已经过去，现在的，还在发生。
           </h3>
           <p>卡片永远都是好的，我们欢迎各位一同构建全新的互通设计和Connect UI，互通设计与Connect UI均以CC 1.0 协议进行许可。</p>
         </div>
         <div class="cui-info-card">
-          <img src="https://pic.imgdb.cn/item/613b57c344eaada73933c045.jpg" class="cui-auto-img-card">
           <h3>
             过去的，已经过去，现在的，还在发生。
           </h3>
           <p>卡片永远都是好的，我们欢迎各位一同构建全新的互通设计和Connect UI，互通设计与Connect UI均以CC 1.0 协议进行许可。</p>
+        </div>
         </div>
         <h2>icons</h2>
-        <span class="cui-our-font"></span>
-        <span class="cui-our-font"></span>
-        <span class="cui-our-font"></span>
+        <span class="cui-our-font"></span>
         <span class="cui-our-font"></span>
         <span class="cui-our-font"></span>
+        <span class="cui-our-font"></span>
+        <span class="cui-our-font"></span>
         <span class="cui-our-font"></span>
+        <span class="cui-our-font"></span>
         <p>很高兴告诉各位，互通设计的图标也将会慢慢字体化，使用会更便利。</p>
   </body>
 </html>
