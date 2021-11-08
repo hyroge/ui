@@ -328,6 +328,33 @@ a:hover {
   border-color: #EFEFEF;
 }
 
+.cui-dropmenu:hover {
+  transition-duration: 0.4s;
+  box-shadow: 0 8px 43px 0 rgba(0, 0, 0, 0.13);
+  transform: scale(1.01, 1.01);
+}
+
+.cui-dropmenu:active {
+  transform: none;
+  transform: scale(0.98, 0.98);
+}
+
+.dmskin-light{
+  padding: 0px;
+  box-shadow: none !important;
+  background-color:rgba(255, 255, 255, 0);
+  border: none;
+  text-align: left !important;
+}
+
+.dmskin-light:hover {
+  transform: none;
+}
+
+.dmskin-light:active {
+  transform: none;
+}
+
 
 .cui-droplist-space{
   width: 20%;
@@ -392,16 +419,8 @@ a:hover {
     transition-timing-function: cubic-bezier(0.56, 0.01, 0.47, 1);
   }
 }
-.cui-dropmenu:hover {
-  transition-duration: 0.4s;
-  box-shadow: 0 8px 43px 0 rgba(0, 0, 0, 0.13);
-  transform: scale(1.01, 1.01);
-}
 
-.cui-dropmenu:active {
-  transform: none;
-  transform: scale(0.98, 0.98);
-}
+
 
 .cui-pop-up-prompt {
   background-color: #FFD83A;
@@ -509,6 +528,14 @@ a:hover {
 
 @media only screen and (max-width: 846px) {
   #cuisnackbar {
+    right: 20px;
+    left: 20px;
+  }
+  #cuisnackbaryellow {
+    right: 20px;
+    left: 20px;
+  }
+  #cuisnackbarred {
     right: 20px;
     left: 20px;
   }
@@ -636,7 +663,7 @@ input::-webkit-input-placeholder{
 }
 
 .cui-checkbox label:after {
-  content: '';
+  content: '';
   position: absolute;
   left: -23.5px;
   top: 2.2px;
@@ -646,7 +673,7 @@ input::-webkit-input-placeholder{
   color: #ffffff;
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
-  font-family: 'OUR-icons' !important;
+  font-family: 'OUR-FONT-ICON' !important;
   font-size: 12px;
   font-weight: 600;
 }
@@ -849,6 +876,7 @@ input::-webkit-input-placeholder{
   margin: 10px;
   box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.07);
   transition: 300ms;
+  margin-left: 0px;
 }
 
 .cui-auto-img-card{
@@ -864,7 +892,7 @@ input::-webkit-input-placeholder{
 
 @media only screen and (max-width: 846px) {
   .cui-card-group{
-    display: none !important;
+    flex-wrap: wrap;
   }
 }
 
@@ -944,4 +972,20 @@ input::-webkit-input-placeholder{
 }
 .search{
   font-family: 'OUR-FONT-ICON' !important;
+}
+
+.cui-dropmenu span{
+  font-family: 'OUR-FONT-ICON' !important;
+  float:right;
+  font-weight: 100;
+}
+@media only screen and (max-width: 846px) {
+  .cui-dropmenu span{
+    float:none;
+  }
+}
+
+
+.cui-radio-group label{
+  margin-bottom: 10px;
 }
