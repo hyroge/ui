@@ -122,7 +122,7 @@ body {
 }
 .cui-if-use-tab-and-sidebar {
   margin-top: 100px;
-  padding-left: 28vh;
+  padding-left: 28vw;
 }
 @media only screen and (max-width: 846px){
   .cui-if-use-tab-and-sidebar {
@@ -133,18 +133,19 @@ body {
 
 
 h1 {
-  font-size: 60px;
+  font-size: 50px;
   margin: 0px;
   font-weight: bolder;
 }
 
 h2 {
   font-size: 40px;
-  font-weight: bolder;
+  font-weight: normal;
   margin: 0px;
 }
 p{
   line-height: 26px;
+  font-size: 18px;
 }
 
 @media only screen and (max-width: 500px) {
@@ -160,7 +161,6 @@ p{
 .cui-tab {
   -webkit-backdrop-filter: blur(22px);
   backdrop-filter: blur(22px);
-  background-color: rgb(255 255 255 / 85%);
   z-index: 1000;
   padding-top: 20px;
   padding-right: 30px;
@@ -170,17 +170,22 @@ p{
   top: 0px;
   left: 0;
   right: 0;
-  float: right;
   transition-duration: 0.4s;
   border-bottom: 1px;
   border-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+  border: 1px;
+  border-style: solid;
+  border-color: #EFEFEF;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.87);
+  box-shadow: 0 2px 18px 0 rgb(0 0 0 / 7%);
 }
 
-.cui-LOGO-on-tab {
-  /* 用于文字LOGO，若要使用SVG的LOGO，请使用.cui-logosvg-on-tab */
-  float: left;
-  margin: 10px;
-}
+
 
 .cui-title-on-tab {
   float: left;
@@ -190,7 +195,6 @@ p{
   border-radius: 16px;
   transition-timing-function: cubic-bezier(1, 0, 0.17, 1);
   transition: 0.4s;
-  float: right;
 }
 .cui-title-on-tab:hover {
   background-color: #f9f8f89d;
@@ -198,6 +202,10 @@ p{
   transition: 0.4s;
 }
 
+.cui-cui-title-tab-group{
+  display: flex;
+  flex-shrink: 0;
+}
 @media only screen and (max-width: 846px) {
   .cui-title-on-tab {
     display: none;
@@ -259,8 +267,8 @@ p{
 
 a {
   color: black;
-  padding: 12px 16px;
-  border-radius: 16px;
+  padding: 10px 10px;
+  border-radius: 4px;
   text-decoration: none;
   display: block;
   margin: 10px;
@@ -284,24 +292,68 @@ a:hover {
 .cui-button {
   padding: 10px;
   background-color: #5395FD;
-  border-radius: 16px;
+  border-radius: 4px;
   border: 0px;
   cursor: pointer;
   transition-duration: 0.4s;
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 18px;
   color: white;
   margin-bottom: 20px;
-  transition-timing-function: cubic-bezier(1, -0.01, 0, 1.01);
-}
-.cui-button:hover {
   transition-duration: 0.4s;
-  box-shadow: 0 8px 43px 0 rgba(0, 0, 0, 0.13);
-  transform: scale(1.01, 1.01);
+
 }
+
+
+.cui-button .cui-loading{
+  margin-right: 20px;
+  border-color: rgb(255, 255, 255)rgba(83, 148, 253, 0)rgb(83, 149, 253,0) ;
+}
+
 .cui-button:active {
   transform: none;
-  transition: 250ms;
+  transform: scale(0.95, 0.95);
+}
+
+.cui-button:hover {
+  background-color: #4A71B4;
+}
+
+
+.cui-big-button-background{
+  padding-left:20px;
+  padding-right:20px;
+  border-radius: 4px;
+  border: 1px;
+  border-style: solid;
+  border-color: #EFEFEF;
+  background-color: rgba(255, 255, 255, 0.562);
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition-duration: 0.2s;
+  width: 100%;
+  cursor: pointer
+}
+
+.cui-big-button-background span{
+  font-size: 20px;
+}
+
+.cui-big-button-background div{
+  display: flex;
+  align-items: center;
+}
+
+.cui-big-button-background:hover {
+  transition-duration: 0.2s;
+  background-color: #f5f5f5;
+}
+
+
+.cui-big-button-background:active {
+  transform: none;
+  transform: scale(0.99, 0.99);
 }
 
 @media only screen and (max-width: 846px) {
@@ -313,31 +365,31 @@ a:hover {
 .cui-dropmenu {
   background-color: white;
   color: black;
-  box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.07);
-  font-weight: bold;
-  border-radius: 16px;
+  border-radius: 4px;
   padding: 10px;
-  font-size: 20px;
   border: none;
   cursor: pointer;
   margin-bottom: 20px;
   transition: 250ms;
-  width: 300px;
+  min-width: 300px;
   text-align: left;
   border: 1px;
+  font-size: 18px;
   border-style: solid;
   border-color: #EFEFEF;
+  display: flex;
+  justify-content: space-between;
 }
 
 .cui-dropmenu:hover {
-  transition-duration: 0.4s;
-  box-shadow: 0 8px 43px 0 rgba(0, 0, 0, 0.13);
-  transform: scale(1.01, 1.01);
+  transition-duration: 0.2s;
+  background-color: #f5f5f5;
 }
+
 
 .cui-dropmenu:active {
   transform: none;
-  transform: scale(0.98, 0.98);
+  transform: scale(0.99, 0.99);
 }
 
 .dmskin-light{
@@ -346,6 +398,16 @@ a:hover {
   background-color:rgba(255, 255, 255, 0);
   border: none;
   text-align: left !important;
+  min-width: 0px;
+}
+
+.dmskin-light .cui-dropmenu-content{
+  padding: 0px;
+  box-shadow: none !important;
+  background-color:rgba(255, 255, 255, 0);
+  border: none;
+  text-align: left !important;
+  min-width: 0px;
 }
 
 .dmskin-light:hover {
@@ -359,8 +421,8 @@ a:hover {
 
 .cui-droplist-space{
   width: 20%;
-  height: 0; /* 设置高为0，让padding撑起高 */
-  padding-bottom: 20%; /* 让div的高等于宽 */
+  height: 0; 
+  padding-bottom: 20%; 
   border-radius: 50%;
 }
 
@@ -379,8 +441,8 @@ a:hover {
   background-color: #ffffff;
   -webkit-backdrop-filter: blur(16px);
           backdrop-filter: blur(16px);
-  background-color: rgba(255, 255, 255, 0.92);
-  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.973);
+  border-radius: 4px;
   min-width: 300px;
   overflow: auto;
   box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.07);
@@ -388,8 +450,6 @@ a:hover {
   transition-duration: 0.4s;
   transition-timing-function: cubic-bezier(0.6, 0.02, 0, 1.01);
   margin-top: -8px;
-  overflow: hidden;
-  transform: scale(1, 0.8);
   overflow: hidden;
   transform: scale(1, 0.8);
 }
@@ -402,10 +462,6 @@ a:hover {
   }
 }
 
-.cui-icons{
-  font-family: 'OUR-icons' !important;
-  margin-right: 10px;
-}
 
 .listshow {
   visibility: visible;
@@ -415,6 +471,7 @@ a:hover {
   transition-duration: 0.6s;
   transition-timing-function: cubic-bezier(0.6, 0.02, 0, 1.01);
 }
+
 @media only screen and (max-width: 846px){
   .listshow{  
     transition-timing-function: cubic-bezier(0.56, 0.01, 0.47, 1);
@@ -424,7 +481,7 @@ a:hover {
 
 
 .cui-pop-up-prompt {
-  background-color: #FFD83A;
+  background-color: #f3f9ff;
   color: rgb(0, 0, 0);
   padding: 10px;
   margin-bottom: 10px;
@@ -433,14 +490,19 @@ a:hover {
   transition-duration: 0.4s;
   transition-timing-function: cubic-bezier(0.6, 0.02, 0, 1.01);
   max-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.cui-parendisplay {
-  float: right;
-  cursor: pointer;
-  font-family: 'OUR-icons' !important;
-  font-size: 16px;
+.cui-pop-up-prompt .cui-our-font{
+  cursor: pointer
 }
+
+.cui-pop-up-prompt div .cui-our-font{
+  cursor: default !important
+}
+
 
 #cuisnackbar {
   visibility: hidden;
@@ -543,18 +605,49 @@ a:hover {
 }
 .cui-input {
   padding: 14px;
-  background-color: white;
-  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.562);
+  border-radius: 4px;
   border: 1px;
   border-style: solid;
   border-color: #EFEFEF;
   outline: none;
   transition-duration: 0.2s;
   margin-top: 10px;
+  box-sizing:border-box;
+  border-bottom-color: #d8d8d8;
+  border-bottom-width: 2px;
+}
+
+.cui-textarea{
+  padding: 14px;
+  background-color: rgba(255, 255, 255, 0.562);
+  border-radius: 4px;
+  border: 1px;
+  border-style: solid;
+  border-color: #EFEFEF;
+  outline: none;
+  transition-duration: 0.2s;
+  margin-top: 10px;
+  box-sizing:border-box;
+  border-bottom-color: #d8d8d8;
+  border-bottom-width: 2px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+  height: 60px;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+.cui-textarea :focus{
+  border-bottom-color: #5395FD;
+}
+
+.cui-input-from{
+  display: flex;align-items: center;
 }
 
 input::-webkit-input-placeholder{
-  font-weight: bold;
+  color: #212121;
 }
 
 
@@ -574,7 +667,7 @@ input::-webkit-input-placeholder{
 .cui-input-color {
   padding: 8px;
   background-color: white;
-  border-radius: 8px;
+  border-radius: 4px;
   border: 1px;
   border-style: solid;
   border-color: #EFEFEF;
@@ -584,21 +677,22 @@ input::-webkit-input-placeholder{
   min-height: 50px;
   cursor: pointer;
   margin-top: 20px;
+
 }
 
 .cui-input:focus {
-  border-color: #5395FD;
-  border-width: 3px;
+  border-bottom-color: #5395FD;
 }
 
 .cui-input-color:focus{
   border-color: #5395FD;
-  border-width: 3px;
+  border-width: 4px;
 }
 
-.cui-label-input {
+.cui-label {
   font-weight: bolder;
   font-size: 20px;
+  margin: 0px;
   margin-right: 20px;
 }
 
@@ -795,23 +889,14 @@ input::-webkit-input-placeholder{
   padding: 1px;
 }
 .cui-loading {
-  border: 2px solid #EFEFEF;
+  border: 2px solid #ffffff;
   border-radius: 50%;
   border-top: 2px solid #5395FD;
-  width: 40px;
-  height: 40px;
-  -webkit-animation: loading 2s cubic-bezier(0.56, -0.02, 0.25, 1.01) infinite;
-  animation: loading 2s cubic-bezier(0.56, -0.02, 0.25, 1.01) infinite;
+  width: 20px;
+  height: 20px;
+  animation: loading 2s infinite;
 }
 
-@-webkit-keyframes loading {
-  0% {
-    -webkit-transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
-}
 @keyframes loading {
   0% {
     transform: rotate(0deg);
@@ -866,11 +951,10 @@ input::-webkit-input-placeholder{
   font-size: 16px;
   margin-right: 10px;
   line-height: 14px;
-  user-select: none;
 }
 
 .cui-info-card {
-  border-radius: 30px;
+  border-radius: 4px;
   background-color: #fff;
   padding: 25px;
   text-align: center;
@@ -899,7 +983,7 @@ input::-webkit-input-placeholder{
 
 
 .cui-sidebar{
-  width: 22vh;
+  width: 24vw;
   background-color: white;
   position: unset;
   display: -ms-flexbox;
@@ -911,7 +995,7 @@ input::-webkit-input-placeholder{
   flex-direction: column;
   height: 100%;
   box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.07);
-  margin-left: -28vh;
+  margin-left: -28vw;
   margin-top: -28px;
   padding: 20px;
   overflow-x:scroll
@@ -933,6 +1017,7 @@ input::-webkit-input-placeholder{
     padding-left: 40px !important;
   }
 }
+
 .cui-a-active{
   background-color: #5395FD;
   color: white;
@@ -944,7 +1029,11 @@ input::-webkit-input-placeholder{
 }
 
 .for-slider{
-  border-radius: 8px;
+  margin: 0px;
+  margin-bottom: 10px;
+  line-height: 14px;
+}
+.cui-sidebar a{
   margin: 0px;
   margin-bottom: 10px;
   line-height: 14px;
@@ -971,13 +1060,9 @@ input::-webkit-input-placeholder{
 .for-checkbox-allround{
   border-radius: 50%;
 }
-.search{
-  font-family: 'OUR-FONT-ICON' !important;
-}
 
 .cui-dropmenu span{
   font-family: 'OUR-FONT-ICON' !important;
-  float:right;
   font-weight: 100;
 }
 @media only screen and (max-width: 846px) {
@@ -989,4 +1074,28 @@ input::-webkit-input-placeholder{
 
 .cui-radio-group label{
   margin-bottom: 10px;
+}
+
+.cui-helper-display-flax{
+  display: flex;
+}
+.cui-helper-display-flax-jcs-sb{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cui-helper-display-flax-jcs{
+  display: flex;
+  justify-content: space-between;
+}
+
+.cui-search-go{
+  background-color: #5395FD;
+  color: white;
+  border-style: none;
+  border-top-right-radius:8px;
+  border-bottom-right-radius:8px;
+  min-width: 50px;
+  font-size: 20px;
+  height: 46px;
 }

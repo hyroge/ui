@@ -8,64 +8,67 @@
     <script src="cui.js" defer></script>
     <title>测试页面</title>
 </head>
-<body class="cui-if-use-tab-and-sidebar">
+<body class="cui-if-use-tab">
 
     <div class="cui-tab">
-        <h2 class="cui-LOGO-on-tab">测试 LOGO (文字)</h2>
-        <h2 class="cui-title-on-tab">测试 Tab</h2>
-        <h2 class="cui-title-on-tab">测试 Tab</h2>
-        <div class="dropdown">
-            <button onclick="myFunction()" class="dropmenu">≡</button>
-              <div id="myDropdown" class="dropmenu-content">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-                <a href="#contact">Contact</a>
-                <a href="#contact">Contact</a>
-                <a href="#contact">Contact</a>
-                <a href="#contact">Contact</a>
-                <a href="#contact">Contact</a>
-                <a href="#contact">Contact</a>
-                <a href="#contact">Contact</a>
-                <a href="#contact">Contact</a>
-                <a href="#contact">Contact</a>
-                <a href="#contact">Contact</a>
-                <a href="#contact">Contact</a>
-              </div>
-            </div>
-    </div>
+        <h2 class="cui-LOGO-on-tab">LOGO</h2>
 
-    <div class="cui-sidebar ">
+        <form action="https://cn.bing.com/search?q" method="get" class="cui-input-from" style="width: 500px;">
+          <input  class="cui-input" type="text" name="text" placeholder="搜索" aria-label="请在此处搜索" style="margin: 0px;width: 100%;border-radius: 0px;border-top-left-radius: 4px;border-bottom-left-radius: 4px;border-right-width: 0px;">  
+          <input type="submit" value="" class="cui-search-go" style="font-family: 'OUR-FONT-ICON';"/>
+        </form>
+
+        <div class="cui-cui-title-tab-group">
+        <h2 class="cui-title-on-tab" style="margin-right: 0px;">测试 Tab</h2>
+        </div>
+
+    </div>
+<!--     <div class="cui-sidebar ">
       <h2>Connect UI 工作台</h2>
-      <input  class="cui-input search" type="text" name="text" placeholder=" 搜索" aria-label="请在此处搜索" autocomplete=”off” style="margin-bottom: 10px; ;">
+      <input  class="cui-input search" type="text" name="text" placeholder="搜索" aria-label="请在此处搜索" style="margin-bottom: 10px;">
+
               <a href="#home" class="cui-a-active for-slider "> <span class="cui-our-font"></span> Home</a>
-              <a href="#about"class="for-slider "> <span class="cui-our-font"></span>About</a>
-              <a href="#contact" class="for-slider "> <span class="cui-our-font"></span>Contact</a>
-              <a href="#contact" class="for-slider "> <span class="cui-our-font"></span>Contact</a>
-              <a href="#contact" class="for-slider "> <span class="cui-our-font"></span>Contact</a>
-              <a href="#contact" class="for-slider "> <span class="cui-our-font"></span>Contact</a>
-              <a href="#contact" class="for-slider "> <span class="cui-our-font"></span>Contact</a>
-              <a href="#contact" class="for-slider "> <span class="cui-our-font"></span>Contact</a>
-              <a href="#contact"class="for-slider " > <span class="cui-our-font"></span>Contact</a>
-              <a href="#contact" class="for-slider "> <span class="cui-our-font"></span>Contact</a>
-              <a href="#contact" class="for-slider "> <span class="cui-our-font"></span>Contact</a>
-              <a href="#contact" class="for-slider "> <span class="cui-our-font"></span>Contact</a>
-              <a href="#contact" class="for-slider "> <span class="cui-our-font"></span>Contact</a>
-              <a href="#contact" class="for-slider "> <span class="cui-our-font"></span>Contact</a>
+              <a href="#about"> <span class="cui-our-font"></span>About</a>
+              <a href="#contact" > <span class="cui-our-font"></span>Contact</a>
+              <a href="#contact" > <span class="cui-our-font"></span>Contact</a>
+              <a href="#contact" > <span class="cui-our-font"></span>Contact</a>
+              <a href="#contact" > <span class="cui-our-font"></span>Contact</a>
+              <a href="#contact" > <span class="cui-our-font"></span>Contact</a>
+              <a href="#contact" > <span class="cui-our-font"></span>Contact</a>
+              <a href="#contact" > <span class="cui-our-font"></span>Contact</a>
+              <a href="#contact" > <span class="cui-our-font"></span>Contact</a>
+              <a href="#contact" > <span class="cui-our-font"></span>Contact</a>
+              <a href="#contact" > <span class="cui-our-font"></span>Contact</a>
+              <a href="#contact" > <span class="cui-our-font"></span>Contact</a>
+              <a href="#contact" > <span class="cui-our-font"></span>Contact</a>
+
       <p class="cui-sidebar-tips">侧边栏小提示，好用和好用</p>
-  </div>
+  </div> -->
+
 
 
     <div class="cui-pop-up-prompt">
-      本页用于测试新特性，如果需要反馈问题，请前往discussions
-      <span class="cui-parendisplay" onclick="this.parentElement.style.display='none'"></span>
+      <div>
+        <span class="cui-our-font"></span>
+        本页用于测试新特性，如果需要反馈问题，请前往discussions
+      </div>
+      <span class="cui-our-font"  onclick="this.parentElement.style.display='none'"></span>
     </div>
     <h1> 测试 </h1>
     <h2>测试测试测试</h2>
     <p>众多组件和特色，都在互通设计内，我们期待您的加入，我们知道我们做不到由一个团队完成一个庞大的设计标准，因此，我们邀请您共建互通设计， 一同设计互通设计的各个组件和布局，完善互通设计的web组件包，一同前进吧。我们欢迎各位一同构建全新的互通设计和Connect UI，互通设计与Connect UI均以CC 1.0 协议进行许可。</p>
-    <button class="cui-button">欢迎使用Connect UI</button>
-    <button class="cui-button"><span class="cui-our-font"></span>欢迎使用Connect UI</button>
+    <div class="cui-helper-display-flax">
+      <button class="cui-button" style="margin-right: 20px;">欢迎使用Connect UI</button>
+      <button class="cui-button" style="margin-right: 20px;"><span class="cui-our-font"></span>欢迎使用Connect UI</button>
+      <button class="cui-button cui-helper-display-flax-jcs-sb" ><div class="cui-loading"> </div>test</div></button></div>
 
+    <button class="cui-big-button-background" style="margin-bottom: 20px;">
+      <div>
+        <span class="cui-our-font"></span>
+        <p>前往文件管理</p>
+      </div>
+      <span class="cui-our-font"></span>
+    </button>
     <div class="cui-dropdownbutton">
         <button onclick="cuidroplist()" class="cui-dropmenu">下拉菜单 <span></span></button>
           <div id="cuidroplist" class="cui-dropmenu-content">
@@ -75,21 +78,27 @@
           </div>
         </div>
 
-        <button onclick="cuisnackbarshow()" class="cui-button">显示 Snackbar</button>
-        <button onclick="cuisnackbarshowyellow()" class="cui-button">显示 Snackbar(y)</button>
+        <button onclick="cuisnackbarshow()" class="cui-button" style="margin-right: 20px;">显示 Snackbar</button>
+        <button onclick="cuisnackbarshowyellow()" class="cui-button" style="margin-right: 20px;">显示 Snackbar(y)</button>
         <button onclick="cuisnackbarshowred()" class="cui-button">显示 Snackbar(r)</button>
 
-        <div id="cuisnackbar"> 从结果看过程是不合理的</div>
+        <div id="cuisnackbar"> <span class="cui-our-font"></span> 从结果看过程是不合理的</div>
         <div id="cuisnackbaryellow"> 从结果看过程是不合理的</div>
-        <div id="cuisnackbarred"> 从结果看过程是不合理的</div>
+        <div id="cuisnackbaryellow"> 从结果看过程是不合理的</div>
 
         <h2>input元素</h2>
-        <form>
-          <label class="cui-label-input">账户</label> <input  class="cui-input" type="username" name="username" placeholder="用户名" aria-label="请在此处输入用户名">
+        <form class="cui-input-from">
+          <label class="cui-label">账户</label> <input  class="cui-input" type="username" name="username" placeholder="用户名" aria-label="请在此处输入用户名">
         </form>
-        <form>
-          <label class="cui-label-input">密码</label> <input  class="cui-input" type="password" name="password" placeholder="密码" aria-label="请在此处输入密码">
+        <form class="cui-input-from">
+          <label class="cui-label">密码</label> <input  class="cui-input" type="password" name="password" placeholder="密码" aria-label="请在此处输入密码">
         </form>
+        <form class="cui-input-from">
+          <label class="cui-label cui-our-font"></label>
+          <input  class="cui-input" type="text" name="text" placeholder="搜索" aria-label="请在此处搜索" style="margin-bottom: 10px;">  
+        </form>
+
+
         <form>
         <input  class="cui-input-color" type="color" name="color" placeholder="选色器" aria-label="在此处选择颜色">
         </form>
@@ -137,12 +146,18 @@
 
 
         <form>
-          <p class="cui-label-input">滑块</p>
-          <p class="cui-label-input">连续滑块</p>
+          <p class="cui-label">滑块</p>
+          <p class="cui-label">连续滑块</p>
           <input type="range" min="0" max="100" step="1" value="50" class="cui-input-range">
           <p>我们仍在尝试更多的表单功能，还有一些形式的滑块暂未完成。</p>
         </form>
-
+          <h1>
+            更多输入
+          </h1>
+          <form method="post">
+            <p class="cui-label">个人简介：</p>
+            <textarea class="cui-textarea" rows="5" cols="20">请介绍一下你自己</textarea>
+        </form>
         <h2>加载</h2>
         <div class="cui-loading"></div>
         <div class="cui-stopwatch">
@@ -162,22 +177,18 @@
           </h3>
           <p>卡片永远都是好的，我们欢迎各位一同构建全新的互通设计和Connect UI，互通设计与Connect UI均以CC 1.0 协议进行许可。</p>
         </div>
-        <div class="cui-info-card">
-          <h3>
-            过去的，已经过去，现在的，还在发生。
-          </h3>
-          <p>卡片永远都是好的，我们欢迎各位一同构建全新的互通设计和Connect UI，互通设计与Connect UI均以CC 1.0 协议进行许可。</p>
-        </div>
-        <div class="cui-info-card">
-          <h3>
-            过去的，已经过去，现在的，还在发生。
-          </h3>
-          <p>卡片永远都是好的，我们欢迎各位一同构建全新的互通设计和Connect UI，互通设计与Connect UI均以CC 1.0 协议进行许可。</p>
-        </div>
         </div>
         <h2>icons</h2>
         <span class="cui-our-font">                        </span>
 
         <p>很高兴告诉各位，互通设计的图标也将会慢慢字体化，使用会更便利。</p>
+
+        <button class="cui-big-button-background">
+          <div>
+            <span class="cui-our-font"></span>
+            <p>前往我们的 Github 仓库</p>
+          </div>
+          <span class="cui-our-font"></span>
+        </button>
   </body>
 </html>
