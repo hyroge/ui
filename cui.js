@@ -3,6 +3,9 @@
 function cuidroplist() {
   document.getElementById("cuidroplist").classList.toggle("listshow");
 }
+function cuidroplist2() {
+  document.getElementById("cuidroplisttab").classList.toggle("listshow");
+}
 
 /* 实现snackbar */
 function cuisnackbarshow() {
@@ -12,88 +15,22 @@ function cuisnackbarshow() {
 }
 
 
-window.onload = () => {
-  const menu = document.querySelector('.menu')
-  const menuHeight = menu.offsetHeight - parseInt(getComputedStyle(menu)['paddingTop']) - parseInt(getComputedStyle(menu)['paddingBottom'])
-  menu.style.height = '0'
-
-  openMenu = e => {
-      e.preventDefault()
-
-      menu.style.left = `${e.clientX}px`
-      menu.style.top = `${e.clientY + 5}px`
-      menu.style.height = `${menuHeight}px`
-      menu.classList.add('is-active')
-
-      return false
-  }
-
-  colseMenu = () => {
-      menu.style.height = '0'
-      menu.classList.remove('is-active')
-  }
-
-  window.onclick = () => colseMenu()
-}
-/* 实现snackbar */
-function cuisnackbarshowyellow() {
-  var x = document.getElementById("cuisnackbaryellow");
-  x.className = "show";
-  setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+let shareData = {
+  title: 'Huton design',
+  text: 'have a nice weekend',
+  url: 'https://connect.ourstudio.top/',
 }
 
+const btn = document.querySelector('#sharingcui');
+const resultPara = document.querySelector('.result');
 
-window.onload = () => {
-  const menu = document.querySelector('.menu')
-  const menuHeight = menu.offsetHeight - parseInt(getComputedStyle(menu)['paddingTop']) - parseInt(getComputedStyle(menu)['paddingBottom'])
-  menu.style.height = '0'
+btn.addEventListener('click', () => {navigator.share(shareData)});
 
-  openMenu = e => {
-      e.preventDefault()
-
-      menu.style.left = `${e.clientX}px`
-      menu.style.top = `${e.clientY + 5}px`
-      menu.style.height = `${menuHeight}px`
-      menu.classList.add('is-active')
-
-      return false
+document.querySelectorAll(".cui-input-range").forEach(elem => {
+  elem.oninput = () => {
+      if (elem.max == '') elem.max = '100';
+      if (elem.min == '') elem.min = '0';
+      elem.style.background = `linear-gradient(to right ,#5395FD ${(elem.value / (elem.max - elem.min))*100}%, #A6D3FD 0%, #A6D3FD ${(1 - (elem.value / (elem.max - elem.min)))*100}%) no-repeat`
   }
-
-  colseMenu = () => {
-      menu.style.height = '0'
-      menu.classList.remove('is-active')
-  }
-
-  window.onclick = () => colseMenu()
-}
-/* 实现snackbar */
-function cuisnackbarshowred() {
-  var x = document.getElementById("cuisnackbarred");
-  x.className = "show";
-  setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
-}
-
-
-window.onload = () => {
-  const menu = document.querySelector('.menu')
-  const menuHeight = menu.offsetHeight - parseInt(getComputedStyle(menu)['paddingTop']) - parseInt(getComputedStyle(menu)['paddingBottom'])
-  menu.style.height = '0'
-
-  openMenu = e => {
-      e.preventDefault()
-
-      menu.style.left = `${e.clientX}px`
-      menu.style.top = `${e.clientY + 5}px`
-      menu.style.height = `${menuHeight}px`
-      menu.classList.add('is-active')
-
-      return false
-  }
-
-  colseMenu = () => {
-      menu.style.height = '0'
-      menu.classList.remove('is-active')
-  }
-
-  window.onclick = () => colseMenu()
-}
+  elem.oninput();
+})
